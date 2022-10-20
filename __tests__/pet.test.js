@@ -35,7 +35,22 @@ describe("growUp", () => {
   });
   it("decreases fitness by 3 with each increase in age of 1", () => {
     const pet = new Pet("Fido");
+    pet.age = 2;
     pet.growUp();
-    expect(pet.fitness).toEqual(pet.age * 3 + pet.fitness);
+    expect(pet.fitness).toEqual(4);
+  });
+});
+describe("walk", () => {
+  it("increases fitness by 4", () => {
+    const pet = new Pet("Fido");
+    pet.fitness = 4;
+    pet.walk();
+    expect(pet.fitness).toEqual(8);
+  });
+  it("increases fitness to maximum of 10", () => {
+    const pet = new Pet("Fido");
+    pet.fitness = 8;
+    pet.walk();
+    expect(pet.fitness).toEqual(10);
   });
 });
