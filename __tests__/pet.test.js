@@ -33,11 +33,10 @@ describe("growUp", () => {
     pet.growUp();
     expect(pet.hunger).toEqual(pet.age * 5);
   });
-  it("decreases fitness by 3 with each increase in age of 1", () => {
+  it("decreases fitness by 3 with each increase in age", () => {
     const pet = new Pet("Fido");
-    pet.age = 2;
     pet.growUp();
-    expect(pet.fitness).toEqual(4);
+    expect(pet.fitness).toEqual(7);
   });
 });
 describe("walk", () => {
@@ -52,5 +51,27 @@ describe("walk", () => {
     pet.fitness = 8;
     pet.walk();
     expect(pet.fitness).toEqual(10);
+  });
+});
+describe("feed", () => {
+  it("decreases pet hunger level by 3", () => {
+    const pet = new Pet("Fido");
+    pet.hunger = 5;
+    pet.feed();
+    expect(pet.hunger).toEqual(2);
+  });
+});
+describe("checkUp", () => {
+  it("alerts needs a walk when fitness in 3 or less", () => {
+    const pet = new Pet("Fido");
+    pet.fitness = 2;
+    pet.checkUp();
+    expect(pet.checkUp()).toEqual("I need a walk");
+  });
+  it("alerts needs feeding when hunger is 5 or more", () => {
+    const pet = new Pet("Fido");
+    pet.hunger = 5;
+    pet.checkUp();
+    expect(pet.checkUp()).toEqual("I am hungry");
   });
 });
