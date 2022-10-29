@@ -129,3 +129,13 @@ describe("isAlive", () => {
     expect(pet.isAlive).toBeTruthy();
   });
 });
+describe("haveBaby", () => {
+  it("creates a new object called newBaby from the Pet instance", () => {
+    const parent = new Pet("Dave");
+    parent.haveBaby("Amelia");
+
+    expect(parent.children).toEqual([
+      { name: "Amelia", age: 0, hunger: 0, fitness: 10, children: [] },
+    ]);
+  });
+});
