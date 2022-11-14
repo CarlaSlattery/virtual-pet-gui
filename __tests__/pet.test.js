@@ -129,23 +129,3 @@ describe("isAlive", () => {
     expect(pet.isAlive).toBeTruthy();
   });
 });
-describe("adoptChild", () => {
-  it("is an array that holds the names passed into the adoptChild method", () => {
-    const parent = new Pet("Frank");
-    parent.adoptChild("Molly");
-
-    expect(parent.children).toEqual([
-      { name: "Molly", age: 0, hunger: 0, fitness: 10, children: [] },
-    ]);
-  });
-});
-describe("haveBaby", () => {
-  it("creates a new object called newBaby from the Pet instance", () => {
-    const parent = new Pet("Dave");
-    parent.haveBaby("Amelia");
-
-    expect(parent.baby).toEqual([
-      { name: "Amelia", age: 0, hunger: 0, fitness: 10, children: [] },
-    ]);
-  });
-});

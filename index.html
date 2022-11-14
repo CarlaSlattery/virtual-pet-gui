@@ -5,10 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Virtual Pet</title>
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <!-- <link rel="stylesheet" href="./styles/normalize.css" /> -->
   </head>
   <body>
+    <div class="header">
+      <h1>Your Virtual Pooch</h1>
+    </div>
+
+    <div class="pet-container">
+      <img
+        id="placeholderPet"
+        class="place-holder"
+        src="./images/alan-king-KZv7w34tluA-unsplash.jpg"
+        alt="dog wearing sunglasses"
+      />
+      <h2>Pick your pooch</h2>
+      <div class="pet-stats">
+        <ul>
+          <li id="petAge">Age</li>
+
+          <li id="petFitness">Fitness</li>
+          <li id="petHunger">Hunger</li>
+          <li id="petHappiness">Happiness</li>
+        </ul>
+      </div>
+      <div class="pet-care">
+        <h3 id="petCare">Care for your Pet</h3>
+        <div class="checkup">
+          <img src="./images/karsten-winegeart-loJL4ijUobg-unsplash.jpg" />
+          <button id="">Check Up</button>
+        </div>
+        <div class="feed">
+          <img src="./images/mathew-coulton-zxqaAkkayP8-unsplash.jpg" />
+          <button id="">Feed</button>
+        </div>
+        <div class="walk">
+          <img src="./images/robert-eklund-dv_R483YAQs-unsplash.jpg?" />
+          <button id="">Walk</button>
+        </div>
+        <div class="play">
+          <img src="./images/andy-powell-GuE_qLQ_Ej8-unsplash.jpg" />
+          <button id="">Play</button>
+        </div>
+      </div>
+    </div>
     <script src="./src/contoller.js"></script>
     <script src="./src/pet.js"></script>
   </body>

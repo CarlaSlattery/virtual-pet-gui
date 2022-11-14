@@ -65,13 +65,4 @@ Pet.prototype.checkUp = function () {
   }
 };
 
-Pet.prototype.adoptChild = function (child) {
-  const child = new Pet(childsName);
-  this.children.push(child);
-};
-Pet.prototype.haveBaby = function (babyName) {
-  const newBaby = new Pet(babyName);
-  this.children.push(newBaby);
-};
-
 module.exports = Pet;

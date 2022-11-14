@@ -1,0 +1,73 @@
+body {
+  background-image: url(../images/bones.background.jpg);
+  background-size: cover;
+  height: 100%;
+  z-index: 1;
+  font-family: "Amatic SC", cursive;
+}
+.header {
+  background-color: pink;
+}
+
+h1 {
+  font-size: 4em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+.pet-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.place-holder {
+  height: 400px;
+  width: 300px;
+}
+
+.pet-stats {
+  display: flex;
+  font-size: 2em;
+  background-color: grey;
+  opacity: 0.8;
+  color: white;
+}
+
+.pet-stats ul {
+  text-decoration: none;
+}
+
+.pet-stats li {
+  padding: 1em;
+}
+
+.pet-care {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.pet-care h3 {
+  font-size: 2em;
+}
+
+.pet-care img {
+  width: 200px;
+  object-fit: contain;
+
+  z-index: 2;
+}
+.pet-care button {
+  padding: 10px 20px;
+  font-family: "Amatic SC";
+  font-size: 1.3em;
+}
+
+.pet-care button:hover {
+  border: 2px solid palevioletred;
+  color: palevioletred;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
+}
