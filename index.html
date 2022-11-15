@@ -18,44 +18,86 @@
     <div class="header">
       <h1>Your Virtual Pooch</h1>
     </div>
+    <section class="intro">
+      <p>
+        Welcome to Virtual Pooch! We have a wide range of dog breeds for you to
+        choose from here. Once you've picked your new best friend, you need to
+        keep an eye on their <span>vital statistics</span>.<br />
+        <span>Don't</span> let your furry friend hunger go higher than 10, or
+        their fitness hit 0, or you pooch will be on their way to doggy heaven
+        before their time :-(. However, with some TLC, you can enjoy them for
+        <span>30 years!</span> (Virtual Pooch years anyway..)
+      </p>
+    </section>
 
     <div class="pet-container">
-      <img
-        id="placeholderPet"
-        class="place-holder"
-        src="./images/alan-king-KZv7w34tluA-unsplash.jpg"
-        alt="dog wearing sunglasses"
-      />
       <h2>Pick your pooch</h2>
-      <div class="pet-stats">
-        <ul>
-          <li id="petAge">Age</li>
-
-          <li id="petFitness">Fitness</li>
-          <li id="petHunger">Hunger</li>
-          <li id="petHappiness">Happiness</li>
-        </ul>
+      <div class="main">
+        <img
+          id="placeholderPet"
+          class="place-holder"
+          src="./images/alan-king-KZv7w34tluA-unsplash.jpg"
+          alt="dog wearing sunglasses"
+        />
+        <button class="grow-up" id="growUp">
+          <p>Grow Up</p>
+          <img
+            src="./images/Time_Monochromatic.png"
+            alt="graphic of clockface"
+          />
+        </button>
       </div>
-      <div class="pet-care">
-        <h3 id="petCare">Care for your Pet</h3>
-        <div class="checkup">
-          <img src="./images/karsten-winegeart-loJL4ijUobg-unsplash.jpg" />
-          <button id="">Check Up</button>
+      <div class="pet-stats">
+        <div class="flex-col-1">
+          <div class="translator" id="dogMessage">
+            <h3>Doggy Translator</h3>
+            <img
+              src="./images/speech-bubble-g9edbe15fb_1280.png"
+              alt="speech bubble"
+            />
+          </div>
         </div>
-        <div class="feed">
-          <img src="./images/mathew-coulton-zxqaAkkayP8-unsplash.jpg" />
-          <button id="">Feed</button>
-        </div>
-        <div class="walk">
-          <img src="./images/robert-eklund-dv_R483YAQs-unsplash.jpg?" />
-          <button id="">Walk</button>
-        </div>
-        <div class="play">
-          <img src="./images/andy-powell-GuE_qLQ_Ej8-unsplash.jpg" />
-          <button id="">Play</button>
+        <div class="flex-col-2">
+          <h3>Vital statistics</h3>
+          <p><span id="petAge"></span>Age</p>
+          <p><span id="petFitness"></span>Fitness</p>
+          <p><span id="petHunger"></span>Hunger</p>
+          <p><span id="petHappiness"></span>Happiness</p>
         </div>
       </div>
     </div>
+    <div class="pet-care">
+      <h3 id="petCare">Care for your Pet</h3>
+      <div class="checkup">
+        <img
+          src="./images/karsten-winegeart-loJL4ijUobg-unsplash.jpg"
+          alt="dog on vet's table"
+        />
+        <button id="">Check Up</button>
+      </div>
+      <div class="feed">
+        <img
+          src="./images/mathew-coulton-zxqaAkkayP8-unsplash.jpg"
+          alt="bowl of dog food with dog paws to side of image"
+        />
+        <button id="">Feed</button>
+      </div>
+      <div class="walk">
+        <img
+          src="./images/robert-eklund-dv_R483YAQs-unsplash.jpg?"
+          alt="toddle walking small dog on lead"
+        />
+        <button id="">Walk</button>
+      </div>
+      <div class="play">
+        <img
+          src="./images/andy-powell-GuE_qLQ_Ej8-unsplash.jpg"
+          alt="dog running towards ball on field"
+        />
+        <button id="">Play</button>
+      </div>
+    </div>
+
     <script src="./src/contoller.js"></script>
     <script src="./src/pet.js"></script>
   </body>
