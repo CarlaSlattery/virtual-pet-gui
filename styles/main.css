@@ -35,13 +35,26 @@ h3 {
 }
 h2 {
   font-size: 3em;
-  border: 1px solid blue;
 }
 
 .pet-container {
   display: flex;
   justify-content: space-around;
-  border: 1px solid blue;
+}
+
+.dogInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  opacity: 0.7;
+  padding-left: 2em;
+  padding-right: 4em;
+  border-radius: 5%;
+}
+
+.dogInfo li {
+  font-size: 1.4em;
+  padding-left: 0;
 }
 
 .main {
@@ -57,7 +70,6 @@ h2 {
 .pet-stats h3 {
   font-weight: 700;
   font-size: 1.5em;
-  border: 1px solid blue;
 }
 .pet-stats {
   display: flex;
@@ -67,7 +79,7 @@ h2 {
   background-color: grey;
   opacity: 0.8;
   color: white;
-  border: 1px solid blue;
+  border-radius: 5%;
   margin-left: 1em;
 }
 
@@ -91,7 +103,6 @@ h2 {
 .pet-care {
   display: flex;
   flex-direction: row;
-  border: 1px solid blue;
 }
 
 .pet-care div {
@@ -139,8 +150,3 @@ h2 {
   transition: all 0.2s ease-in-out;
   transform: scale(1.2);
 }
-/*
-.main button:hover {
-  transform: none;
-}
-*/

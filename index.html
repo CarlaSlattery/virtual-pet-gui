@@ -31,7 +31,18 @@
     </section>
 
     <div class="pet-container">
-      <h2>Pick your pooch</h2>
+      <div class="dogInfo">
+        <h2>Pick your pooch</h2>
+        <h3>Characteristics</h3>
+        <ul>
+          <li>Name</li>
+          <li>M / F</li>
+          <li>Likes</li>
+          <li>Dislikes</li>
+          <li>Fun Fact</li>
+        </ul>
+        <button id="dogSelect">Adopt!</button>
+      </div>
       <div class="main">
         <img
           id="placeholderPet"
@@ -50,7 +61,7 @@
       <div class="pet-stats">
         <div class="flex-col-1">
           <div class="translator" id="dogMessage">
-            <h3>Doggy Translator</h3>
+            <h3 id="translator">Doggy Translator</h3>
             <img
               src="./images/speech-bubble-g9edbe15fb_1280.png"
               alt="speech bubble"
@@ -59,7 +70,7 @@
         </div>
         <div class="flex-col-2">
           <h3>Vital statistics</h3>
-          <p><span id="petAge"></span>Age</p>
+          <p>Age:<span id="petAge"></span></p>
           <p><span id="petFitness"></span>Fitness</p>
           <p><span id="petHunger"></span>Hunger</p>
           <p><span id="petHappiness"></span>Happiness</p>
@@ -99,6 +110,9 @@
     </div>
 
     <script src="./src/contoller.js"></script>
-    <script src="./src/pet.js"></script>
+
+    <script>
+      //   const pet = new Pet();
+    </script>
   </body>
 </html>
