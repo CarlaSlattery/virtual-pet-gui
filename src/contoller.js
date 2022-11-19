@@ -1,34 +1,32 @@
-//import { Pet } from "./pet.js";
-//import Pet from "../src/pet";
-(function exportDog() {
-  const MAXIMUM_FITNESS = 10;
-  const MINIMUM_FITNESS = 0;
-  const MAXIMUM_HUNGER = 10;
-  const MINIMUM_HUNGER = 0;
-  const MAXIMUM_AGE = 30;
-  class Dog {
-    constructor(name) {
-      this.name = name;
-      this.age = 0;
-      this.hunger = MINIMUM_HUNGER;
-      this.fitness = MAXIMUM_FITNESS;
-    }
-    renderStats() {
-      const ageElement = document.querySelector("#petAge");
-      return (ageElement.innerHTML = ` ${this.age}`);
-    }
-    dogTranslator(message) {
-      const dogMessageElement = document.createElement("p");
-      dogMessageElement.id = "message";
-      dogMessageElement.innerHTML = message;
+import { Pet } from "./pet.js";
 
-      const speechBubble = document.querySelector("#translator");
-      speechBubble.appendChild(dogMessageElement);
+const pet = new Pet("Frank");
+class Controller {
+  constructor(pet) {
+    document.querySelector("#dogAdopt").addEventListener("click", () => {
+      this.adopt();
+    });
+  }
+  adopt() {
+    let statsDiv = document.createElement("div");
+    statsDiv.id = "petStats";
+
+    const vitalStats = document.querySelector("#vitalStats");
+    vitalStats.appendChild(statsDiv);
+
+    document
+      .getElementById("#dogAdopt")
+      .addEventListener("click", initialisePet);
+    function initialisePet() {
+      let age = document.getElementById("petAge");
     }
   }
-  if (typeof module !== "undefined" && module.exports) {
-    module.exports = Dog;
-  } else {
-    window.Dog = Dog;
+  updateStats() {}
+  dogTranslator(message) {
+    const dogMessageElement = document.createElement("p");
+    dogMessageElement.id = "message";
+    dogMessageElement.innerHTML = message;
   }
-})();
+}
+
+module.exports = Controller;

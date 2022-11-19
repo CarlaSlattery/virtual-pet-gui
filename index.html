@@ -33,15 +33,26 @@
     <div class="pet-container">
       <div class="dogInfo">
         <h2>Pick your pooch</h2>
+        <div class="breed">
+          <select class="breeds">
+            <option value="starter">Pick Me!</option>
+          </select>
+        </div>
         <h3>Characteristics</h3>
         <ul>
-          <li>Name</li>
-          <li>M / F</li>
-          <li>Likes</li>
-          <li>Dislikes</li>
-          <li>Fun Fact</li>
+          <li id="dogName"><span>Name: </span>Frank</li>
+          <li id="MF"><span>M / F </span>Male</li>
+          <li id="likes">
+            <span>Likes: </span>Sniffing lampposts, cuddles on the sofa
+          </li>
+          <li id="dislikes">
+            <span>Dislikes: </span>Doorbells, the neighbours dog
+          </li>
+          <li id="fun-fact">
+            <span>Fun Fact: </span>Falls out with the TV when his food runs out
+          </li>
         </ul>
-        <button id="dogSelect">Adopt!</button>
+        <button class="adopt" id="dogAdopt">Adopt!</button>
       </div>
       <div class="main">
         <img
@@ -68,12 +79,14 @@
             />
           </div>
         </div>
-        <div class="flex-col-2">
+        <div class="flex-col-2" id="vitalStats">
           <h3>Vital statistics</h3>
-          <p>Age:<span id="petAge"></span></p>
-          <p><span id="petFitness"></span>Fitness</p>
-          <p><span id="petHunger"></span>Hunger</p>
-          <p><span id="petHappiness"></span>Happiness</p>
+          <div id="petStats">
+            <p>Age:<span id="petAge"></span></p>
+            <p><span id="petFitness"></span>Fitness</p>
+            <p><span id="petHunger"></span>Hunger</p>
+            <p><span id="petHappiness"></span>Happiness</p>
+          </div>
         </div>
       </div>
     </div>
@@ -108,11 +121,7 @@
         <button id="">Play</button>
       </div>
     </div>
-
-    <script src="./src/contoller.js"></script>
-
-    <script>
-      //   const pet = new Pet();
-    </script>
+    <script type="module" src="./src/contoller.js"></script>
+    <script src="./src/dog-picker.js"></script>
   </body>
 </html>
