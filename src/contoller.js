@@ -1,32 +1,24 @@
-import { Pet } from "./pet.js";
+import Pet from "./pet.js";
 
-const pet = new Pet("Frank");
-class Controller {
-  constructor(pet) {
-    document.querySelector("#dogAdopt").addEventListener("click", () => {
-      this.adopt();
-    });
-  }
-  adopt() {
-    let statsDiv = document.createElement("div");
-    statsDiv.id = "petStats";
-
-    const vitalStats = document.querySelector("#vitalStats");
-    vitalStats.appendChild(statsDiv);
-
-    document
-      .getElementById("#dogAdopt")
-      .addEventListener("click", initialisePet);
-    function initialisePet() {
-      let age = document.getElementById("petAge");
+(function exportController() {
+  const adopt = document.querySelector("#dogAdopt");
+  class Controller {
+    constructor() {
+      this.pet = null;
+    }
+    initialisePet(name) {
+      this.pet = new Pet(name);
+    }
+    adopt() {
+      adopt.addEventListener("click", (event) => {
+        let age = document.getElementById("petAge");
+        age.innerHTML = `Age: ${this.age}`;
+      });
     }
   }
-  updateStats() {}
-  dogTranslator(message) {
-    const dogMessageElement = document.createElement("p");
-    dogMessageElement.id = "message";
-    dogMessageElement.innerHTML = message;
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = Controller;
+  } else {
+    window.controller = new Controller();
   }
-}
-
-module.exports = Controller;
+})();

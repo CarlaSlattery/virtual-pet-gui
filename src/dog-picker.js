@@ -11,8 +11,15 @@ fetch(BREEDS_URL)
     const breedsArray = Object.keys(breedsObject); //Turn object into array
     for (let i = 0; i < breedsArray.length; i++) {
       const option = document.createElement("option");
-      option.value = breedsArray[i]; //option value = breedArray[i]value
+      option.value = breedsArray[i]; //<option value = "breed">breed</option>
       option.innerText = breedsArray[i];
-      select.appendChild(option);
+      select.appendChild(option); //adds current<option> tag to the select box list of options
     }
   });
+
+select.addEventListener("change", (event) => {
+  let url = `https://dog.ceo/api/breed/${event.target.value}/images/random`;
+  console.log(url);
+});
+
+//const img = document.querySelector("");
