@@ -1,7 +1,6 @@
 import Pet from "./pet.js";
 
 (function exportController() {
-  const adopt = document.querySelector("#dogAdopt");
   class Controller {
     constructor() {
       this.pet = null;
@@ -9,13 +8,21 @@ import Pet from "./pet.js";
     initialisePet(name) {
       this.pet = new Pet(name);
     }
-    adopt() {
-      adopt.addEventListener("click", (event) => {
-        let age = document.getElementById("petAge");
-        age.innerHTML = `Age: ${this.age}`;
-      });
-    }
   }
+
+  const ageElement = document.querySelector("#petAge");
+  const hungerElement = document.querySelector("#petHunger");
+  const fitnessElement = document.querySelector("#petFitness");
+
+  const adopt = document.querySelector("#dogAdopt");
+  adopt.addEventListener("click", () => {
+    const controller = new Controller();
+    controller.initialisePet("Frank");
+    ageElement.innerHTML = ` ${controller.pet.age}`;
+    hungerElement.innerHTML = ` ${controller.pet.hunger}`;
+    fitnessElement.innerHTML = ` ${controller.pet.fitness}`;
+    console.log(controller.pet);
+  });
   if (typeof module !== "undefined" && module.exports) {
     module.exports = Controller;
   } else {
