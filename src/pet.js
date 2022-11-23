@@ -59,16 +59,3 @@ export default class Pet {
     }
   }
 }
-
-//module.exports = Pet;
-//const adopt = document.querySelector("#dogAdopt");
-//adopt.addEventListener("click", function () {
-//document.querySelector("#petAge").innerHTML = ` ${this.age}`;
-//console.log("Dog Selected!");
-// });
-
-// const growUpButton = document.querySelector("#growUp");
-//growUpButton.addEventListener("click", function () {
-// document.querySelector("#petAge").innerHTML = ` ${this.age}`;
-// console.log("1 year older");
-// })
