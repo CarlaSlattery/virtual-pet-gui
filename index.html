@@ -23,8 +23,8 @@
         Welcome to Virtual Pooch! We have a wide range of dog breeds for you to
         choose from here. Once you've picked your new best friend, you need to
         keep an eye on their <span>vital statistics</span>.<br />
-        <span>Don't</span> let your furry friend hunger go higher than 10, or
-        their fitness hit 0, or you pooch will be on their way to doggy heaven
+        <span>Don't</span> let your furry friend's hunger go higher than 10, or
+        their fitness hit 0, or your pooch will be on their way to doggy heaven
         before their time :-(. However, with some TLC, you can enjoy them for
         <span>30 years!</span> (Virtual Pooch years anyway..)
       </p>
@@ -35,22 +35,22 @@
         <h2>Pick your pooch</h2>
         <div class="breed">
           <select class="breeds">
-            <option value="starter">Pick Me!</option>
+            <option value="starter">Choose your dog!</option>
           </select>
         </div>
         <h3>Characteristics</h3>
         <ul>
-          <li>Name:<span id="dogName"></span></li>
+          <li>Name: <span id="dogName"></span></li>
 
-          <li>M / F:<span id="MF"></span></li>
-          <li id="likes">
-            <span>Likes: </span>Sniffing lampposts, cuddles on the sofa
+          <li>M / F: <span id="MF"></span></li>
+          <li>
+            Likes: <span id="likes"></span>
           </li>
-          <li id="dislikes">
-            <span>Dislikes: </span>Doorbells, the neighbours dog
+          <li>Dislikes:
+            <span id="dislikes"></span>
           </li>
-          <li id="fun-fact">
-            <span>Fun Fact: </span>Falls out with the TV when his food runs out
+          <li>Fun Fact:</li>
+            <span id="fun-fact"></span>
           </li>
         </ul>
         <button class="adopt" id="dogAdopt">Adopt!</button>
@@ -122,8 +122,9 @@
         <button id="">Play</button>
       </div>
     </div>
+    <script src="./src/dog-picker.js"></script>
     <script type="module" src="./src/contoller.js"></script>
 
-    <script src="./src/dog-picker.js"></script>
+    
   </body>
 </html>
