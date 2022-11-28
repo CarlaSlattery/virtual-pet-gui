@@ -13,11 +13,13 @@ import Pet from "./pet.js";
   const ageElement = document.querySelector("#petAge");
   const hungerElement = document.querySelector("#petHunger");
   const fitnessElement = document.querySelector("#petFitness");
+  const happinessElement = document.querySelector("#petHappiness");
 
   function updateStats() {
     ageElement.innerHTML = ` ${controller.pet.age}`;
     hungerElement.innerHTML = ` ${controller.pet.hunger}`;
     fitnessElement.innerHTML = ` ${controller.pet.fitness}`;
+    happinessElement.innerHTML = ` ${controller.pet.happiness}`;
   }
 
   const adopt = document.querySelector("#dogAdopt");
@@ -32,6 +34,25 @@ import Pet from "./pet.js";
     controller.pet.growUp();
     updateStats();
   });
+
+  const feedButton = document.querySelector("#feedPet");
+  feedButton.addEventListener("click", () => {
+    controller.pet.feed();
+    updateStats();
+  });
+
+  const walkButton = document.querySelector("#walkPet");
+  walkButton.addEventListener("click", () => {
+    controller.pet.walk();
+    updateStats();
+  });
+
+  const playButton = document.querySelector("#playPet");
+  playButton.addEventListener("click", () => {
+    controller.pet.play();
+    updateStats();
+  });
+
   if (typeof module !== "undefined" && module.exports) {
     module.exports = Controller;
   } else {
